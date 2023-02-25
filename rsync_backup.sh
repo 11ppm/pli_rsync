@@ -122,7 +122,7 @@ if [ $sshkey_exists -eq 1 ]; then
     echo -e "${YELLOW}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     private_key="~/.ssh/id_${sshkey_type}"
-    # Create the local directory if it does not exist
+    # ローカルディレクトリがなければ作成
     echo -e "${YELLOW}mkdir -p $local_dir && rsync -avz --progress -e 'ssh -i ${NC}${RED}${private_key}${NC}${YELLOW} -p ${ssh_port}' ${remote_user}@${ip_address}:$backup_dir ${local_dir}${NC}"
     echo
     echo -e "${YELLOW}-----------------------------------------------------------------------------------------------------${NC}"
