@@ -1,3 +1,10 @@
+<br/>
+<p align="center">
+<img src="https://github.com/11ppm/pm2_log/blob/main/img/img2.jpg" width="225" alt="PluginJapan">
+</a>
+</p>
+<br/>
+
 # rsync_backup
 
 ## 概要
