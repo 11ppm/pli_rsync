@@ -37,14 +37,14 @@ sudo apt install rsync
 
 ## スクリプトの実行
 
-
+リポジトリを`git clone`し、`pli_rsync_backup`ディレクトリに入り、`rsync_backup.sh`の実行権限を変更します。
 ```
 git clone https://github.com/11ppm/pli_rsync_backup
 cd pli_rsync_backup
 chmod +x rsync_backup.sh
 ```
 
-
+実行します
 
 ```
 ./rsync_backup.sh
