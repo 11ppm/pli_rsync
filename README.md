@@ -11,7 +11,6 @@
 * rsyncを使って、プラグインノードのバックアップファイルを、VPSからローカルマシンに転送できるコマンドを作成します
 * 同時に、ローカルマシンからプラグインノードへバックアップファイルを転送できるコマンドも作成します
 * 各種暗号に対応。以下は、スクリプトで検出される可能性のあるSSH鍵のタイプのリストです
-
      * ssh-dss
      * ssh-rsa
      * ecdsa-sha2-nistp
@@ -23,7 +22,7 @@
   したがって、このスクリプトでは、DSA、RSA、ECDSA、Ed25519、RSA-PSS、x25519、x448の鍵タイプに対応しています
 
 * 日本語と英語に対応
- 　　　　  * `tranlations.csv`を作成し、日本語と英語に対応させました
+     * `tranlations.csv`を作成し、日本語と英語に対応させました
      * 必要であれば、他の言語にも対応しますので、お知らせください
 
 ## 機能
@@ -44,16 +43,16 @@ sudo apt install rsync
 
 ## スクリプトの実行
 
-リポジトリを`git clone`し、`pli_rsync_backup`ディレクトリに入り、`rsync_backup.sh`の実行権限を変更します。
+リポジトリを`git clone`し、`pli_rsync`ディレクトリに入り、`pli_rsync.sh`の実行権限を変更します。
 ```
-git clone https://github.com/11ppm/pli_rsync_backup
-cd pli_rsync_backup
-chmod +x rsync_backup.sh
+git clone https://github.com/11ppm/pli_rsync
+cd pli_rsync
+chmod +x pli_rsync.sh
 ```
 
 実行します
 
 ```
-./rsync_backup.sh
+./pli_rsync.sh
 ```
 
