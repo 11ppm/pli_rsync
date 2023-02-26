@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="https://github.com/11ppm/pm2_log/blob/main/img/img2.jpg" width="225" alt="PluginJapan">
+<img src="./img/img01.jpg" width="225" alt="PluginJapan">
 </a>
 </p>
 <br/>
@@ -65,6 +65,8 @@ chmod +x pli_rsync.sh
 ```
 
 英語か日本語を選択します。パスワードを求められますので、入力します。
+
+`IP Address : 123.456.789.10`は例えです。
 ```sh
 Select a language 言語を選択してください :
 
@@ -77,10 +79,10 @@ Enter the number 数字を入力してください : 1
 
                                        Your Plugin Node                                          
 -----------------------------------------------------------------------------------------------------
-IP Address           : 194.233.80.250
+IP Address           : 123.456.789.10
 User                 : Doraemon
 Backup Directory     : /plinode_backups/
-Local Directory      : ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/
+Local Directory      : ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/
 SSH Port             : 22
 ※ SSH key was not detected 
 -----------------------------------------------------------------------------------------------------
@@ -89,7 +91,7 @@ SSH Port             : 22
                              Plugin Node    =====>>    Local Machine                             
 -----------------------------------------------------------------------------------------------------
 
-mkdir -p ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/ && rsync -avz --progress -e 'ssh -p 22' Doraemon@194.233.80.250:/plinode_backups/ ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/
+mkdir -p ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/ && rsync -avz --progress -e 'ssh -i ~/.ssh/id_rsa -p 22' Doraemon@123.456.789.10:/plinode_backups/ ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/
 
 -----------------------------------------------------------------------------------------------------
 To download backup file from the Plugin Node.run the following command in your local machine's terminal
@@ -99,7 +101,7 @@ To download backup file from the Plugin Node.run the following command in your l
                              Plugin Node    <<=====    Plugin Node                             
 -----------------------------------------------------------------------------------------------------
 
-rsync -avz --progress -e 'ssh -p 22' ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/ Doraemon@194.233.80.250:/plinode_backups/
+rsync -avz --progress -e 'ssh -i ~/.ssh/id_rsa -p 22' ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/ Doraemon@123.456.789.10:/plinode_backups/
 
 -----------------------------------------------------------------------------------------------------
 To upload backup files from your local machine to the Plugin Node.run the following command in your terminal on the local machine.
@@ -118,12 +120,17 @@ Terminalを開いて、貼り付けて実行してください。
 プラグインノードに`/plinode_backups/`が用意されているかどうかを、事前に確認してください。`/plinode_backups/`がないと、実行されません。
 
 1. Cygwinをダウンロード
+     
      https://www.cygwin.com/
-     <img src="https://camo.qiitausercontent.com/2962471f20c4ad0667bf219a76c05c15bec0f52c/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f31313130303835302d333265612d616333372d616230372d3935393266653663383831322e706e67">
+     
+     <img src="./img/img02.png">
+     
 
 
 2. Cygwinをインストール
-     <img src="https://camo.qiitausercontent.com/f15cda6571e12c8b07588ca9257711889ea3c5a8/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f31356235323566382d623536312d613332622d363037352d6232616633623038653335392e706e67)">
+     <img src="./img/img11.png">
+
+     <img src="./img/img12.png">
      
      
 
@@ -131,30 +138,38 @@ Terminalを開いて、貼り付けて実行してください。
    1. Category → Net → Openssh
    2. Category → Net → rsync
 
-     <img src="https://camo.qiitausercontent.com/dff970b3ba8f32444ed216178adde73e30f9bcb6/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f65623532316464312d613665332d363338342d346633332d3338323033636135383762632e706e67">
+     <img src="./img/img03.png">
 
-     <img src="https://camo.qiitausercontent.com/147c8fd8f07921ac42c006baf89efc6e6d34ea95/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f36623337336531332d376130362d363430382d353663642d3661313736663862663763632e706e67">
+     <img src="./img/img13.png">
 
-     <img src="https://camo.qiitausercontent.com/d27a118dbd12da09adc3fce47b29c6ffeb6eb0ff/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f38626162666538612d383139662d333065322d306464372d3131323264313938323463372e706e67">
+     <img src="./img/img04.png">
 
+     <img src="./img/img15.png">
+
+     <img src="./img/img14.png">
    
 4. Cygwinを起動
-     <img src="https://camo.qiitausercontent.com/d27a118dbd12da09adc3fce47b29c6ffeb6eb0ff/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f38626162666538612d383139662d333065322d306464372d3131323264313938323463372e706e67">
+     <img src="./img/img05.png">
 
  
 
 5. 隠しファイルを可視化し、`.ssh`が見えるようにする
 
-     <img src="https://camo.qiitausercontent.com/8627846f9d29f7e86395763d432a172246cd2533/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f33363464343235642d343634622d323933652d353832342d6237633637396633303664392e706e67">
+     <img src="./img/img06.png">
 
-     <img src="https://camo.qiitausercontent.com/1ff47580fd81c4562a6f84f50329957d3dab0bce/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f36633362396538352d643837312d653835622d313339312d3536613963316332663366652e706e67">
+     <img src="./img/img07.png">
 
-     <img src="https://camo.qiitausercontent.com/eb4f5029e089c7fda0265aed7a33cb5c8a9edd0a/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f64316335306232642d373661312d663034382d373862372d6437613463613564326566632e706e67">
+     <img src="./img/img08.png">
+
 
 6. rsyncの実行
 
-     <img src="https://camo.qiitausercontent.com/0fdb277361ff04fefddd27b1f3ff5e31bc802334/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f30613063376362652d333064652d316232352d633830332d3065343861333939653666662e706e67">
+     <img src="./img/img09.png">
 
-     <img src="https://camo.qiitausercontent.com/e2fd0fcaca2b311c74ca68f48d81505c256b8ce8/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f323531383930372f62343339373637382d323035622d643961362d653462332d3936383932386131316462662e706e67">
+     <img src="./img/img10.png">
 
+
+## Author
+
+* @11ppm
    <!-- <img src=""> -->
