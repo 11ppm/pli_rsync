@@ -12,6 +12,7 @@
 ## Overview
 * Create a command using rsync to transfer backup files located in the `/plinode_backups/` directory of Plugin nodes from a VPS to a local machine.
 * Create a command using rsync to transfer backup files from a local machine to the `/plinode_backups/` directory of Plugin nodes simultaneously.
+* Please check if `/plinode_backups/` is available on the Plugin nodes before proceeding. If `/plinode_backups/` is not available, the command will not be executed.
 * Compatible with various encryption types. The following is a list of SSH key types that may be detected by the script:
      * ssh-dss
      * ssh-rsa
@@ -29,8 +30,8 @@
 
 ## Features
 1. Reads English and Japanese messages from a CSV file and displays them depending on the selected language.
-2. Transfers the `/plinode_backups/` directory of Plugin nodes to the local machine.
-3. Can also transfer backup files from the local machine to Plugin nodes.
+2. Create a command to transfer the `/plinode_backups/` directory of Plugin nodes to the local machine.
+3. At the same time, create a command to transfer backup files from the local machine to the `/plinode_backups/` directory of Plugin nodes.
 4. rsync also supports ssh-key.
 
 ## About rsync
@@ -103,8 +104,11 @@ Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your priva
 
 Open the terminal and paste and execute the script.
 
+Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
 
 ## Local Machine (for Windows)
+
+Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
 
 1. Download Cygwin
      https://www.cygwin.com/
