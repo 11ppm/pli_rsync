@@ -7,7 +7,7 @@
 
 # pli_rsync
 
- [README 日本語版](https://github.com/11ppm/pli_pm2/blob/main/README_JP.md)
+ [README 日本語版](https://github.com/11ppm/pli_rsync/blob/main/README_JP.md)
 
 ## Overview
 * Create a command to transfer backup files of plugin nodes from VPS to a local machine using rsync.

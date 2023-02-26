@@ -7,6 +7,8 @@
 
 # pli_rsync
 
+[README English](https://github.com/11ppm/pli_rsync/blob/main/README.md)
+
 ## 概要
 * rsyncを使って、プラグインノードのバックアップファイルを、VPSからローカルマシンに転送できるコマンドを作成します
 * 同時に、ローカルマシンからプラグインノードへバックアップファイルを転送できるコマンドも作成します
