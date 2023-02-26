@@ -9,7 +9,7 @@ YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 # CSVファイル名
-csv_file="translations.csv"
+csv_file="./translations/translations.csv"
 
 # 言語の選択
 echo
