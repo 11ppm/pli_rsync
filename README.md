@@ -97,12 +97,12 @@ To upload backup files from your local machine to the Plugin Node.run the follow
 Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your private key.
 ```
 
-## Linux,Macの場合
+## ローカルマシン（Linux,Macの場合）
 
 Terminalを開いて、貼り付けて実行してください。
 
 
-## Windowsの場合
+## ローカルマシン（Windowsの場合）
 
 1. Cygwinをダウンロード
      https://www.cygwin.com/
