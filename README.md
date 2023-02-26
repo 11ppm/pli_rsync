@@ -39,26 +39,26 @@ rsync is a file synchronization tool. It is mainly used to synchronize files/dir
 The main feature of rsync is that it can transfer only the modified parts. That is, by calculating the differences between the source and destination files and transferring only the parts with differences, it operates very efficiently when transferring large amounts of data.
 
 Probably the plugin node has it installed. You can check it with rsync --version. If it is not installed, please run the following command to install it.
-```
+```sh
 sudo apt install rsync
 ```
 
 ## Git Clone the repository
 
 Clone the repository, enter the pli_rsync directory, and change the permissions of pli_rsync.sh before running it.
-```
+```sh
 git clone https://github.com/11ppm/pli_rsync
 cd pli_rsync
 chmod +x pli_rsync.sh
 ```
 
 ## Executing the script
-```
+```sh
 ./pli_rsync.sh
 ```
 
 Select English or Japanese, and enter your password when prompted.
-```
+```sh
 Select a language 言語を選択してください :
 
 1. English
