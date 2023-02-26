@@ -10,8 +10,8 @@
  [README 日本語版](https://github.com/11ppm/pli_rsync/blob/main/README_JP.md)
 
 ## Overview
-* Create a command to transfer backup files of plugin nodes from VPS to a local machine using rsync.
-* Create a command to transfer backup files from a local machine to plugin nodes simultaneously.
+* Create a command using rsync to transfer backup files located in the `/plinode_backups/` directory of Plugin nodes from a VPS to a local machine.
+* Create a command using rsync to transfer backup files from a local machine to the `/plinode_backups/` directory of Plugin nodes simultaneously.
 * Compatible with various encryption types. The following is a list of SSH key types that may be detected by the script:
      * ssh-dss
      * ssh-rsa
@@ -29,8 +29,8 @@
 
 ## Features
 1. Reads English and Japanese messages from a CSV file and displays them depending on the selected language.
-2. Transfers backup files of plugin nodes to the local machine.
-3. Can also transfer backup files from the local machine to plugin nodes.
+2. Transfers the `/plinode_backups/` directory of Plugin nodes to the local machine.
+3. Can also transfer backup files from the local machine to Plugin nodes.
 4. rsync also supports ssh-key.
 
 ## About rsync
