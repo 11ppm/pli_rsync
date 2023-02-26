@@ -35,11 +35,16 @@
 4. rsync also supports ssh-key.
 
 ## About rsync
-rsync is a file synchronization tool. It is mainly used to synchronize files/directories in two different locations. rsync can synchronize files between a local machine and a remote machine, and transfer files over the network.
+rsync is a file synchronization tool that is mainly used to synchronize files/directories in different locations. rsync can synchronize files between a local machine and a remote machine, and transfer files over the network.
 
 The main feature of rsync is that it can transfer only the modified parts. That is, by calculating the differences between the source and destination files and transferring only the parts with differences, it operates very efficiently when transferring large amounts of data.
 
-Probably the plugin node has it installed. You can check it with rsync --version. If it is not installed, please run the following command to install it.
+In addition, rsync has other advantages such as:
+
+Ability to resume transfers from where they left off if interrupted
+Faster transfer of multiple files than scp in some cases
+Display of progress during transfers, making it easier to monitor transfer status
+The plugin node probably has rsync installed, which can be checked with rsync --version. If it is not installed, please run the following command to install it.
 ```sh
 sudo apt install rsync
 ```
