@@ -67,6 +67,43 @@ Enter the number 数字を入力してください : 1
 [sudo] password for Doraemon: 
 ```
 
+```
+                             Plugin Node    =====>>    Local Machine                             
+-----------------------------------------------------------------------------------------------------
+
+mkdir -p ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/ && rsync -avz --progress -e 'ssh -p 22' Doraemon@194.233.80.250:/plinode_backups/ ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/
+
+-----------------------------------------------------------------------------------------------------
+To download backup file from the Plugin Node.run the following command in your local machine's terminal
+```
+
+
+```
+                             Plugin Node    <<=====    Plugin Node                             
+-----------------------------------------------------------------------------------------------------
+
+rsync -avz --progress -e 'ssh -p 22' ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/ Doraemon@194.233.80.250:/plinode_backups/
+
+-----------------------------------------------------------------------------------------------------
+To upload backup files from your local machine to the Plugin Node.run the following command in your terminal on the local machine.
+Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your private key.
+```
+
+
+
+
+
+```
+                                       Your Plugin Node                                          
+-----------------------------------------------------------------------------------------------------
+IP Address           : 194.233.80.250
+User                 : Doraemon
+Backup Directory     : /plinode_backups/
+Local Directory      : ~/Documents/plugin_node/CT-TEST_194.233.80.250/plinode_backups/
+SSH Port             : 22
+※ SSH key was not detected 
+-----------------------------------------------------------------------------------------------------
+```
 
 ## Windowsの場合
 
