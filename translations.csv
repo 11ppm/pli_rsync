@@ -24,5 +24,3 @@ PLUGIN_NODE_SSH_PORT,SSH Port,SSH Port
 PLUGIN_NODE_SSHKEY_TYPE,SSH Key Type,SSH Key Type
 NOTE,Note,重要
 YOUR_PLUGIN_NODE,Your Plugin Node,Your Plugin Node
-BLANK,,
-
