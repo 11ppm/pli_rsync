@@ -48,44 +48,26 @@ while read line; do
 done <$csv_file
 
 echo
-echo
-echo
-echo
-echo
-echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
 # リモートサーバーのIPアドレスを取得する
 ip_address=$(ip addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v '127.0.0.1' | head -n1)
-# echo -e "$PLUGIN_NODE_IP : $ip_address"
-printf "%-20s : %s\n" "$PLUGIN_NODE_IP" "$ip_address"
 
 # リモートユーザーとして現在のユーザーを取得する
 remote_user=$(whoami)
-# echo -e "$PLUGIN_NODE_USER : $remote_user"
-printf "%-20s : %s\n" "$PLUGIN_NODE_USER" "$remote_user"
 
 # リモートバックアップディレクトリを設定する
 backup_dir="/plinode_backups/"
-# echo -e "$PLUGIN_NODE_BACKUP_DIR : $backup_dir"
-printf "%-20s : %s\n" "$PLUGIN_NODE_BACKUP_DIR" "$backup_dir"
 
 # バックアップファイルを保存するローカルディレクトリを設定する
 local_dir="~/Documents/plugin_node/$HOSTNAME"_"$ip_address$backup_dir"
-# echo -e "$PLUGIN_NODE_LOCAL_DIR : $local_dir"
-printf "%-20s : %s\n" "$PLUGIN_NODE_LOCAL_DIR" "$local_dir"
 
 # sshd_configファイルからsshポート番号を取得する
 ssh_port=$(sudo ss -tlpn | grep sshd | awk '{print$4}' | cut -d ':' -f 2 -s)
-
 if [[ -z "$ssh_port" ]]; then
     ssh_port=22
 fi
 
-# echo -e "$PLUGIN_NODE_SSH_PORT : $ssh_port"
-printf "%-20s : %s\n" "$PLUGIN_NODE_SSH_PORT" "$ssh_port"
-
 # SSHキーが存在するかを確認する
 sshkey_exists=0
-
 if grep -q "ssh-dss" ~/.ssh/authorized_keys 2>/dev/null; then
     sshkey_type="dsa"
     sshkey_exists=1
@@ -108,17 +90,27 @@ elif grep -q "ssh-x448" ~/.ssh/authorized_keys 2>/dev/null; then
     sshkey_type="x448"
     sshkey_exists=1
 fi
+echo
+echo
+echo -e "                                         ${NC}$YOUR_PLUGIN_NODE${NC}"
+echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
+printf "%-20s : %s\n" "$PLUGIN_NODE_IP" "$ip_address"
+printf "%-20s : %s\n" "$PLUGIN_NODE_USER" "$remote_user"
+printf "%-20s : %s\n" "$PLUGIN_NODE_BACKUP_DIR" "$backup_dir"
+printf "%-20s : %s\n" "$PLUGIN_NODE_LOCAL_DIR" "$local_dir"
+printf "%-20s : %s\n" "$PLUGIN_NODE_SSH_PORT" "$ssh_port"
 
 if [ $sshkey_exists -eq 1 ]; then
     # SSHキーを使用してrsyncを実行する
-    echo -e "$SSH_KEY_DETECTED : $sshkey_type"
+    # echo -e "$SSH_KEY_DETECTED : $sshkey_type"
+    printf "%-20s : %s\n" "$SSH_KEY_DETECTED" "$sshkey_type"
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo
     echo
     echo
     echo
-    echo -e "${YELLOW}                              $REMOTE_SERVER   =====>>   $LOCAL_MACHINE                             ${NC}"
+    echo -e "${YELLOW}                                  $REMOTE_SERVER   =====>>    $LOCAL_MACHINE                             ${NC}"
     echo -e "${YELLOW}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     private_key="~/.ssh/id_${sshkey_type}"
@@ -132,7 +124,7 @@ if [ $sshkey_exists -eq 1 ]; then
     echo
     echo
     echo
-    echo -e "                              $REMOTE_SERVER   <<=====   $LOCAL_MACHINE                             "
+    echo -e "                                  $REMOTE_SERVER   <<=====    $REMOTE_SERVER                             "
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo -e "${NC}rsync -avz --progress -e 'ssh -i ${RED}${private_key}${NC} -p ${ssh_port}' ${local_dir} ${remote_user}@${ip_address}:$backup_dir${NC}"
@@ -147,14 +139,14 @@ if [ $sshkey_exists -eq 1 ]; then
     echo
 else
     # ※ SSHキーを使用せずにrsyncを実行する
-    echo -e "${YELLOW}$SSH_KEY_NOT_DETECTED${NC}"
+    printf "%-20s : %s\n" "${YELLOW}$SSH_KEY_NOT_DETECTED${NC}" ""
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo
     echo
     echo
     echo
-    echo -e "${YELLOW}                              $REMOTE_SERVER   =====>>   $LOCAL_MACHINE                             ${NC}"
+    echo -e "${YELLOW}                                  $REMOTE_SERVER   =====>>    $LOCAL_MACHINE                             ${NC}"
     echo -e "${YELLOW}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo -e "${YELLOW}mkdir -p $local_dir && rsync -avz --progress -e 'ssh -p ${ssh_port}' ${remote_user}@${ip_address}:$backup_dir ${local_dir}${NC}"
@@ -166,7 +158,7 @@ else
     echo
     echo
     echo
-    echo -e "                              $REMOTE_SERVER   <<=====    $REMOTE_SERVER                             "
+    echo -e "                                  $REMOTE_SERVER   <<=====    $REMOTE_SERVER                             "
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo -e "${NC}rsync -avz --progress -e 'ssh -p ${ssh_port}' ${local_dir} ${remote_user}@${ip_address}:$backup_dir${NC}"
@@ -180,27 +172,4 @@ else
     echo
 fi
 
-# echo "メッセージテスト"
-# echo "$GET_IP_ADDRESS"
-# echo "$GET_REMOTE_USER"
-# echo "$SET_REMOTE_BACKUP_DIR"
-# echo "$SET_LOCAL_BACKUP_DIR"
-# echo "$GET_SSH_PORT"
-# echo "$CHECK_SSH_KEYS"
-# echo "$RSYNC_SSH_KEYS"
-# echo "$RSYNC_WITHOUT_SSH_KEYS"
-# echo "$SSH_KEY_DETECTED"
-# echo "$DOWNLOAD_BACKUP"
-# echo "$REMOTE_SERVER"
-# echo "$LOCAL_MACHINE"
-# echo "$UPLOAD_BACKUP"
-# echo "$SSH_KEY_NOT_DETECTED"
-# echo "$REPLACE"
-# echo "$PRIVATE_KEY_PATH_FILENAME"
-# echo "$PLUGIN_NODE_IP"
-# echo "$PLUGIN_NODE_USER"
-# echo "$PLUGIN_NODE_BACKUP_DIR"
-# echo "$PLUGIN_NODE_LOCAL_DIR"
-# echo "$PLUGIN_NODE_SSH_PORT"
-# echo "$PLUGIN_NODE_SSHKEY_TYPE"
-# echo "$NOTE"
+

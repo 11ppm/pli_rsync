@@ -1,6 +1,6 @@
 key,english,japanese
 LANG,English,日本語
-GET_IP_ADDRESS,Get the remote server IP address,リモートサーバーのIPアドレスを取得する
+GET_IP_ADDRESS,Plugin Node IP Address,プラグインノードのIPアドレスを取得する
 GET_REMOTE_USER,Get the current user as the remote username,リモートユーザーとして現在のユーザーを取得する
 SET_REMOTE_BACKUP_DIR,Set the remote backup directory,リモートバックアップディレクトリを設定する
 SET_LOCAL_BACKUP_DIR,Set the local directory to save backup files,バックアップファイルを保存するローカルディレクトリを設定する
@@ -9,10 +9,10 @@ CHECK_SSH_KEYS,Check if SSH keys exist,SSHキーが存在するかを確認す�
 RSYNC_SSH_KEYS,Rsync with SSH keys,SSHキーを使用してrsyncを実行する
 RSYNC_WITHOUT_SSH_KEYS,Rsync without SSH keys,SSHキーを使用せずにrsyncを実行する
 SSH_KEY_DETECTED,SSH key type,SSHキーのタイプ
-DOWNLOAD_BACKUP,To download backup files from the remote server...run the following command in your local machine's terminal,リモートサーバーからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
-REMOTE_SERVER,remote server,リモートサーバー
-LOCAL_MACHINE,local machine,ローカルマシン
-UPLOAD_BACKUP,To upload backup files from your local machine to the remote server...run the following command in your terminal on the local machine.,ローカルマシンからバックアップファイルをリモートサーバーにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
+DOWNLOAD_BACKUP,To download backup file from the Plugin Node.run the following command in your local machine's terminal,プラグインノードからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
+REMOTE_SERVER,Plugin Node,プラグインノード
+LOCAL_MACHINE,Local Machine,ローカルマシン
+UPLOAD_BACKUP,To upload backup files from your local machine to the Plugin Node.run the following command in your terminal on the local machine.,ローカルマシンからバックアップファイルをプラグインノードにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
 SSH_KEY_NOT_DETECTED,※ SSH key was not detected,※ SSHキーは検出されませんでした
 REPLACE,Replace,
 PRIVATE_KEY_PATH_FILENAME,with the appropriate path and filename of your private key.,の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください
@@ -23,3 +23,4 @@ PLUGIN_NODE_LOCAL_DIR,Local Directory,Local Directory
 PLUGIN_NODE_SSH_PORT,SSH Port,SSH Port
 PLUGIN_NODE_SSHKEY_TYPE,SSH Key Type,SSH Key Type
 NOTE,Note,重要
+YOUR_PLUGIN_NODE,Your Plugin Node,Your Plugin Node
