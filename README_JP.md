@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="./img/img01.jpg" width="225" alt="PluginJapan">
+<img src="https://github.com/11ppm/pm2_log/blob/main/img/img2.jpg" width="225" alt="PluginJapan">
 </a>
 </p>
 <br/>
@@ -108,68 +108,22 @@ To upload backup files from your local machine to the Plugin Node.run the follow
 Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your private key.
 ```
 
-## ローカルマシン（Linux,Macの場合）
+## ローカルマシン（Linux,Mac,WSL2の場合）
 
 Terminalを開いて、貼り付けて実行してください。
 
-プラグインノードに`/plinode_backups/`が用意されているかどうかを、事前に確認してください。`/plinode_backups/`がないと、実行されません。
 
 
-<!-- ## ローカルマシン（Windowsの場合） -->
+Note: 
+* プラグインノードに`/plinode_backups/`が用意されているかどうかを、事前に確認してください。`/plinode_backups/`がないと、実行されません。
+* Linux（Ubuntu）,Mac,WSL2 (Windows Subsystem for Linux 2) ,Windows10及び11(Cygwin使用)で動作確認ができました。
+* Windowsをお使いの場合は、WSL2でUbuntuを入れて実行するのが簡単でおすすめしますが、`Cygwin`を使っても可能です。その場合は、以下のリンクから参照してください。
+  
+     [Setting up Cygwin to use rsync on Windows](https://qiita.com/11ppm/private/3c5dddbcbc458400e62b)
 
-プラグインノードに`/plinode_backups/`が用意されているかどうかを、事前に確認してください。`/plinode_backups/`がないと、実行されません。
-
-1. Cygwinをダウンロード
-     
-     https://www.cygwin.com/
-     
-     <img src="./img/img02.png">
-     
-
-
-2. Cygwinをインストール
-     <img src="./img/img11.png">
-
-     <img src="./img/img12.png">
-     
-     
-
-3. インストールパッケージの選択
-   1. Category → Net → Openssh
-   2. Category → Net → rsync
-
-     <img src="./img/img03.png">
-
-     <img src="./img/img13.png">
-
-     <img src="./img/img04.png">
-
-     <img src="./img/img15.png">
-
-     <img src="./img/img14.png">
-   
-4. Cygwinを起動
-     <img src="./img/img05.png">
-
- 
-
-5. 隠しファイルを可視化し、`.ssh`が見えるようにする
-
-     <img src="./img/img06.png">
-
-     <img src="./img/img07.png">
-
-     <img src="./img/img08.png">
-
-
-6. rsyncの実行
-
-     <img src="./img/img09.png">
-
-     <img src="./img/img10.png">
 
 
 ## Author
 
 * @11ppm
-   <!-- <img src=""> -->
+   
