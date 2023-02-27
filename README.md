@@ -97,7 +97,7 @@ To download backup file from the Plugin Node.run the following command in your l
 
 
 
-                             Plugin Node    <<=====    Plugin Node                             
+                             Plugin Node    <<=====    Local Machine                             
 -----------------------------------------------------------------------------------------------------
 
 rsync -avz --progress -e 'ssh -i ~/.ssh/id_rsa -p 22' ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/ Doraemon@123.456.789.10:/plinode_backups/
