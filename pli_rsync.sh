@@ -37,12 +37,11 @@ esac
 # CSVファイルからメッセージを読み込み
 while read line; do
     # キー名を取得
-    # cutコマンドでカンマを区切り文字とし、1列目のフィールドを抽出
-    key=$(echo $line | cut -d ',' -f 1)
+    # cutコマンドで`|`を区切り文字とし、1列目のフィールドを抽出
+    key=$(echo $line | cut -d '|' -f 1)
     # 選択された言語に対応するメッセージを取得
-    # awk -Fオプションを使ってフィールド区切り文字を`,`に指定、$で$lang_colで指定された列を取得
-    # この方法であれば、フィールドの値の中に,が含まれていても正しく取得することが可能
-    message=$(echo $line | awk -F ',' '{print $'$lang_col'}')
+    # awk -Fオプションを使ってフィールド区切り文字を`|`に指定、$で$lang_colで指定された列を取得
+    message=$(echo $line | awk -F '|' '{print $'$lang_col'}')
     # 変数に格納
     eval "$key=\"$message\""
 done <$csv_file
