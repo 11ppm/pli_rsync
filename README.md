@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-<img src="./img/img01.jpg" width="225" alt="PluginJapan">
+<img src="https://github.com/11ppm/pm2_log/blob/main/img/img2.jpg" width="225" alt="PluginJapan">
 </a>
 </p>
 <br/>
@@ -107,64 +107,20 @@ To upload backup files from your local machine to the Plugin Node.run the follow
 Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your private key.
 ```
 
-## Local Machine (for Linux/Mac)
+## Local Machine (for Linux/Mac/WSL2)
 
 Open the terminal and paste and execute the script.
 
-Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
+Note: 
+* Please check if `/plinode_backups/` is available on the Plugin nodes before proceeding. If `/plinode_backups/` is not available, the command will not be executed.
+* Tested on Linux (Ubuntu), Mac, and WSL2 (Windows Subsystem for Linux 2), Windows 10 and 11 (with Cygwin).
+* If you are using Windows, it is recommended to install and run Ubuntu on WSL2, which is easy to set up. However, it is also possible to use `Cygwin`. In that case, please refer to the link below.
 
-<!-- ## Local Machine (for Windows)
-
-Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
-
-1. Download Cygwin
-     https://www.cygwin.com/
-     
-     <img src="./img/img02.png">
+     [Setting up Cygwin to use rsync on Windows](https://qiita.com/11ppm/private/3c5dddbcbc458400e62b)
 
 
-2. Install Cygwin
-     <img src="./img/img11.png">
-
-     <img src="./img/img12.png">
-     
-
-3. Select the installation packages
-   1. Category → Net → Openssh
-   2. Category → Net → rsync
-
-     <img src="./img/img03.png">
-
-     <img src="./img/img13.png">
-
-     <img src="./img/img04.png">
-
-     <img src="./img/img15.png">
-
-     <img src="./img/img14.png">
-
-
-4. Launch Cygwin.
-     <img src="./img/img05.png">
-
-
-5. Make hidden files visible and ensure that `.ssh` is visible
-
-     <img src="./img/img06.png">
-
-     <img src="./img/img07.png">
-
-     <img src="./img/img08.png">
-
-
-6. Execute rsync
-
-     <img src="./img/img09.png">
-
-     <img src="./img/img10.png">
- -->
 
 ## Author
 
 * @11ppm
-   <!-- <img src=""> -->
+
