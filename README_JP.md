@@ -84,28 +84,28 @@ User                 : Doraemon
 Backup Directory     : /plinode_backups/
 Local Directory      : ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/
 SSH Port             : 22
-※ SSH key was not detected 
+※ SSHキーは検出されませんでした 
 -----------------------------------------------------------------------------------------------------
 
 
-                             Plugin Node    =====>>    Local Machine                             
+                             プラグインノード    =====>>    ローカルマシン                             
 -----------------------------------------------------------------------------------------------------
 
 mkdir -p ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/ && rsync -avz --progress -e 'ssh -i ~/.ssh/id_rsa -p 22' Doraemon@123.456.789.10:/plinode_backups/ ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/
 
 -----------------------------------------------------------------------------------------------------
-To download backup file from the Plugin Node.run the following command in your local machine's terminal
+プラグインノードからバックアップファイルをダウンロードするには、ローカルマシンの端末で次のコマンドを実行します
 
 
 
-                             Plugin Node    <<=====    Local Machine                             
+                             プラグインノード    <<=====    ローカルマシン                             
 -----------------------------------------------------------------------------------------------------
 
 rsync -avz --progress -e 'ssh -i ~/.ssh/id_rsa -p 22' ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/ Doraemon@123.456.789.10:/plinode_backups/
 
 -----------------------------------------------------------------------------------------------------
-To upload backup files from your local machine to the Plugin Node.run the following command in your terminal on the local machine.
-Note: Replace ~/.ssh/id_rsa with the appropriate path and filename of your private key.
+ローカルマシンからバックアップファイルをプラグインノードにアップロードするには、ローカルマシンのターミナルで次のコマンドを実行します
+重要:  ~/.ssh/id_rsa の箇所は、適切なパスと秘密鍵のファイル名に置き換えてください
 ```
 
 ## ローカルマシン（Linux,Mac,WSL2の場合）

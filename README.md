@@ -83,7 +83,7 @@ User                 : Doraemon
 Backup Directory     : /plinode_backups/
 Local Directory      : ~/Documents/plugin_node/CT-TEST_123.456.789.10/plinode_backups/
 SSH Port             : 22
-※ SSH key was not detected 
+SSH key type         : rsa
 -----------------------------------------------------------------------------------------------------
 
 
