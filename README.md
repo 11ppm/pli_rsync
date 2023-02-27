@@ -113,7 +113,7 @@ Open the terminal and paste and execute the script.
 
 Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
 
-## Local Machine (for Windows)
+<!-- ## Local Machine (for Windows)
 
 Please check if /plinode_backups/ is available on the Plugin nodes before proceeding. If /plinode_backups/ is not available, the command will not be executed.
 
@@ -162,7 +162,7 @@ Please check if /plinode_backups/ is available on the Plugin nodes before procee
      <img src="./img/img09.png">
 
      <img src="./img/img10.png">
-
+ -->
 
 ## Author
 
