@@ -26,7 +26,7 @@
 
 * Corresponds to both Japanese and English
      * Created translations.csv to correspond to Japanese and English
-     * If necessary, we can also correspond to other languages, so please let us know.
+     * If necessary, I can also correspond to other languages, so please let me know.
 
 ## Features
 1. Reads English and Japanese messages from a CSV file and displays them depending on the selected language.

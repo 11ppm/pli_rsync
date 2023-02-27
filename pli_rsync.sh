@@ -124,7 +124,7 @@ if [ $sshkey_exists -eq 1 ]; then
     echo
     echo
     echo
-    echo -e "${NC}                             $REMOTE_SERVER    <<=====    $REMOTE_SERVER                             ${NC}"
+    echo -e "${NC}                             $REMOTE_SERVER    <<=====    $LOCAL_MACHINE                             ${NC}"
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo -e "${NC}rsync -avz --progress -e 'ssh -i ${RED}${private_key}${NC} -p ${ssh_port}' ${local_dir} ${remote_user}@${ip_address}:$backup_dir${NC}"
@@ -159,7 +159,7 @@ else
     echo
     echo
     echo
-    echo -e "${NC}                             $REMOTE_SERVER    <<=====    $REMOTE_SERVER                             ${NC}"
+    echo -e "${NC}                             $REMOTE_SERVER    <<=====    $LOCAL_MACHINE                             ${NC}"
     echo -e "${NC}-----------------------------------------------------------------------------------------------------${NC}"
     echo
     echo -e "${NC}rsync -avz --progress -e 'ssh -p ${ssh_port}' ${local_dir} ${remote_user}@${ip_address}:$backup_dir${NC}"
